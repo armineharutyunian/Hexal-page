@@ -1,0 +1,390 @@
+/********************
+***GLOBAL SETTINGS***
+*********************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 500px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body, nav ul, .first-row, .second-row, .third-row, #pagination, #about-me, #about-wrapper, #description, #sm-btns, #contact-wrapper, #get-in-touch form, footer {
+  display: flex;
+}
+
+nav ul, .first-row, .second-row, .third-row, #pagination, #sm-btns {
+  flex-direction: row;
+}
+
+body, #description, #get-in-touch form {
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 90px;
+  background-color: #323232;
+  clip-path: polygon(0 0, 0 0, 85% 0%, 100% 0, 100% 70%, 54.5% 70%, 50% 100%, 44.5% 70%, 0 70%);
+}
+
+/********************
+********FONTS********
+*********************/
+
+nav ul li a, #about-me p, #get-in-touch form input, textarea, #information {
+  font-family: 'Lato', sans-serif;
+}
+
+#about-me h1, #about-me h2, #get-in-touch h1, #get-in-touch legend, footer {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+/********************
+******NAVIGATION*****
+*********************/
+
+nav ul {
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  padding-top: 32px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #2eb398;
+  cursor: pointer;
+}
+
+nav ul li a:active {
+  color: red;
+}
+
+nav ul li:first-child {
+  padding-right: 25px;
+}
+
+nav ul li:last-child {
+  padding-left: 25px;
+}
+
+nav ul #logo {
+  height: 50px;
+  padding: 13px 40px 26px;
+}
+
+/********************
+******PORTFOLIO******
+*********************/
+
+section #portfolio {
+  height: 695px;
+}
+
+.hexal-img {
+  width: 205px;
+  height: 205px;
+  cursor: pointer;
+  clip-path: polygon(50% 0%, 95% 28%, 95% 72%, 50% 100%, 5% 72%, 5% 28%);
+}
+
+.hexal-img:hover {
+  opacity: 0.5;
+}
+
+.first-row, .second-row, .third-row {
+  justify-content: center;
+  position: relative;
+}
+
+.first-row {
+  z-index: 999;
+  top: 45px;
+}
+
+.third-row {
+  z-index: 999;
+  bottom: 45px;
+}
+
+#pagination {
+  position: relative;
+  bottom: 22px;
+  left: 25px;
+}
+
+.square {
+  width: 10px;
+  height: 10px;
+  margin: 0px 2px;
+  background-color: #ddd2c5;
+  cursor: pointer;
+}
+
+.square:active {
+  background-color: #8b8784;
+}
+
+hr {
+  margin: 0px 27px 10px;
+}
+
+/********************
+******ABOUT ME*******
+*********************/
+
+#about-me {
+  height: 340px;
+  background-color: #2eb398;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-wrapper {
+  margin: 68px 120px;
+}
+
+#avatar {
+  flex: 25%;
+  margin-right: 10px;
+  position: relative;
+}
+
+#hexal-avatar {
+  width: 205px;
+  height: 205px;
+  clip-path: polygon(50% 0%, 95% 28%, 95% 72%, 50% 100%, 5% 72%, 5% 28%);
+}
+
+#description {
+  flex: 75%;
+  width: 580px;
+}
+
+#about-me h1 {
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 0;
+  color: white;
+}
+
+#about-me h2 {
+  font-size: 18px;
+  font-weight: lighter;
+  margin: 0;
+  color: #20816d;
+}
+
+#about-me p {
+  font-size: 12px;
+  font-weight: lighter;
+  margin-bottom: 40px;
+  color: white;
+}
+
+#sm-btns {
+  align-self: flex-end;
+}
+
+#sm-btns:hover {
+  cursor: pointer;
+}
+
+/********************
+******CONTACTS*******
+*********************/
+
+#get-in-touch {
+  height: 566px;
+  background-color: #323232;
+}
+
+#contact-wrapper {
+  padding: 66px 120px;
+}
+
+#contact-wrapper form {
+  flex: 75%;
+}
+
+#get-in-touch h1 {
+  font-size: 30px;
+  margin: 0px;
+  color: white;
+}
+
+#get-in-touch legend {
+  font-size: 18px;
+  color: #bebebe;
+}
+
+#get-in-touch form {
+  width: 570px;
+}
+
+#get-in-touch form input, textarea {
+  background-color: #454545;
+  font-size: 12px;
+  color: #bebebe;
+  border-style: none;
+  margin-top: 15px;
+  padding-left: 15px;
+}
+
+#get-in-touch form input {
+  height: 37px;
+}
+
+#get-in-touch form textarea {
+  padding-top: 12px;
+}
+
+#get-in-touch form input[type="submit"] {
+  width: 90px;
+  background-color: #2eb398;
+  align-self: flex-end;
+  font-weight: bolder;
+  padding: 0px;
+  transform: perspective(1px) translateZ(0);
+}
+
+@keyframes hvr-effect {
+  to {
+    transform: scale(0.9);
+  }
+}
+
+#get-in-touch form input[type="submit"]:hover {
+  animation-name: hvr-effect;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+#information {
+  width: 180px;
+  flex: 25%;
+  padding-left: 20px;
+  padding-top: 55px;
+  font-size: 12px;
+  line-height: 17px;
+  color: #bebebe;
+}
+
+#information p {
+  padding: 0;
+}
+
+#information p span {
+  color: #e0e0e0;
+}
+
+#information ul {
+  list-style: none;
+  padding: 45px 0px;
+}
+
+#information ul i {
+  width: 15%;
+  color: #2eb398;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/********************
+*******FOOTER********
+*********************/
+
+footer {
+  height: 40px;
+  background-color: #222222;
+  color: #454545;
+  font-size: 12px;
+  align-items: center;
+  padding-left: 40px;
+}
+
+/***************************
+MEDIA RULES FOR DIF. SCREENS
+****************************/
+
+@media screen and (max-width: 1020px) {
+    .hexal-img {
+      width: calc(100%/5);
+      height: calc(100%/5);
+    }
+
+    #contact-wrapper form {
+      flex: 70%;
+    }
+
+    #information {
+      flex: 30%;
+    }
+
+    #information ul {
+      white-space: nowrap;
+    }
+
+    #get-in-touch legend {
+      width: 100%;
+      white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .first-row {
+      z-index: 999;
+      top: 25px;
+    }
+
+    .third-row {
+      z-index: 999;
+      bottom: 25px;
+    }
+
+    #pagination {
+      bottom: 15px;
+    }
+
+    #about-wrapper {
+      margin: 68px 20px;
+    }
+
+    #hexal-avatar {
+      width: 180px;
+      height: 180px;
+    }
+
+    #description {
+      width: 70%;
+    }
+
+    #contact-wrapper {
+      padding: 66px;
+    }
+
+    #get-in-touch form {
+      width: 60%;
+    }
+
+    #information {
+      width: 40%;
+    }
+}
